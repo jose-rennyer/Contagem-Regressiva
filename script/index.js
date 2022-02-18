@@ -1,11 +1,10 @@
-let hora = document.querySelector("#campo1").value
 let min = document.querySelector("#campoprimario").value
 let sec = document.querySelector("#camposecundario").value
 let mil = 100
 let ateofim;
 
 function contar(){
-    hora = document.querySelector("#campo1").value
+    document.querySelector(".count").style.display = "none"
     min = document.querySelector("#campoprimario").value
     sec = document.querySelector("#camposecundario").value
     mil = 100
@@ -24,13 +23,16 @@ function zero(digito){
     }
 }
 
+
+
 function parar(){
+    document.querySelector(".count").style.display = "block"
     clearInterval(ateofim)
     hora = 0
     min = 0
     sec = 0
     mil = 100
-    document.querySelector(".numero").innerHTML = `${zero(hora)}:${zero(min)}:${zero(sec)}`
+    document.querySelector(".numero").innerHTML = `${zero(min)}:${zero(sec)}`
 }
 
 /*function contando(){
@@ -72,7 +74,9 @@ function contando(){
     if(mil == 0){
         mil = 100
         sec--
-    } else if(sec == 0){
+    }else if(sec > 60){
+        sec = 60
+    } else if(sec == 0 || sec == 00){
         verificasec()
     }
     document.querySelector(".numero").innerHTML = `${zero(min)}:${zero(sec)}`

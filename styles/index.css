@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:monospace
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100vh;
+    background-color:#e714a8
+}
+.mid {
+    background-color:#e714a8;
+    width:700px;
+    padding:30px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.mid .title{
+    font-size:4.5rem;
+    color:#0f0;
+    text-shadow:1px 2px 5px #000
+}
+.field{
+    margin-top:20px;
+}
+.mid #campoprimario, #camposecundario{
+    background-color:#e714a8;
+    border:2px solid  #0f0;
+    outline:0;
+    border-radius:5px;
+    width:100px;
+    font-size:4rem;
+    padding:5px;
+    color:#0f0;
+    text-shadow:1px 2px 3px #000;
+    box-shadow:1px 2px 6px #000
+}
+.numero {
+    font-size:7rem;
+    color:#0f0;
+    text-shadow:1px 2px 9px #000
+}
+.buttons{
+    display:flex;
+    width:100%;
+}
+.buttons .count,
+.parar{
+    flex:1;
+    font-size:40px;
+    margin-right:10px;
+    margin-left:10px;
+    border:1px solid #000;
+    border-radius:10px;
+    color:#fff;
+    text-shadow:1px 1px 5px#000;
+    padding:5px 0px;
+    cursor:pointer;
+}
+.count{
+    background-color:rgb(42, 187, 42);
+}
+.parar{
+    background-color:crimson;
+}
+
+@media(min-width:400px) and (max-width:700px){
+    .mid{
+        width:430px;
+    }
+    .mid .title{
+        font-size:2.6rem
+    }
+    .numero{
+        font-size:5rem
+    }
+    .mid #campoprimario, #camposecundario{
+        width:70px;
+        font-size:2rem;
+        padding:8px 2px;
+        text-align:center;
+    }
+    .buttons .count,
+    .parar{
+        font-size:35px;
+    }
+}
+@media(max-width:399px){
+    .mid{
+        width:300px;
+    }
+    .mid .title{
+        font-size:3rem;
+        text-align:center;
+    }
+    .numero{
+        font-size:5rem
+    }
+    .mid #campoprimario, #camposecundario{
+        width:70px;
+        font-size:2rem;
+        padding:8px 2px;
+        text-align:center;
+    }
+    .buttons .count,
+    .parar{
+        font-size:25px;
+    }
+
+}

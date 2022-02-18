@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time out</title>
+    <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
-    <h1>Contagem regressiva</h1>
+    <div class="mid">
+        <div class="title">
+            Contagem regressiva
+        </div>
+        <div class="field">
+            <input type="text" id="campoprimario" maxlength="4" placeholder="MIN"/>
+            <input type="text" id="camposecundario" maxlength="2" placeholder="SEC"/>
+        </div>
+        
+        <h1 class="numero">00:00</h1>
 
-    <input type="text" id="campo1" maxlength="2"/>
-    <input type="text" id="campoprimario" maxlength="2"/>
-    <input type="text" id="camposecundario" maxlength="2"/>
-    <h1 class="numero">00:00:00</h1>
-    <button onclick="contar()">Contar</button>
-    <button onclick="parar()">pausar</button>
+        <div class="buttons">
+            <button class="count" onclick="contar()">Contar</button>
+            <button class="parar" onclick="parar()">Parar</button>
+        </div>
+        
+    </div>
+    
+
+    
 
     <script src="script/index.js"></script>
 </body>
