@@ -5,6 +5,7 @@ let ateofim;
 
 function contar(){
     document.querySelector(".count").style.display = "none"
+    document.querySelector(".numero").style.color = "cyan"
     min = document.querySelector("#campoprimario").value
     sec = document.querySelector("#camposecundario").value
     mil = 100
@@ -27,6 +28,7 @@ function zero(digito){
 
 function parar(){
     document.querySelector(".count").style.display = "block"
+    document.querySelector(".numero").style.color = "#0f0"
     clearInterval(ateofim)
     hora = 0
     min = 0
@@ -76,16 +78,16 @@ function contando(){
         sec--
     }else if(sec > 60){
         sec = 60
-    } else if(sec == 0 || sec == 00){
+    } else if(sec <= -1){
         verificasec()
     }
     document.querySelector(".numero").innerHTML = `${zero(min)}:${zero(sec)}`
 }
 
 function verificasec(){
-    if(min == 0 && sec == 0){
+    if(min == 0 && sec <= -1){
         sec = 0
-        clearTimeout(ateofim)
+        clearInterval(ateofim)
     } else {
         sec = 59
         min--
